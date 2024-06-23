@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    /* visible screen ke undar content rahe    */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* visible area */
+
+    background-color: black;
+}
+
+.clock{
+    width: 450px;
+    height: 450px;
+    background: url(clock.png);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    align-items: center;
+}
+
+.clock:before{
+
+    /* before   clock se pehle kuch dekhana ho  */
+
+    content: " ";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    z-index: 10000;
+
+}
+
+.clock .hour, .clock .min, .clock .sec{
+    position:absolute;
+
+
+}
+
+.clock .hour, .hr{
+    width: 160px;
+    height:160px;
+    
+}
+
+.clock .min, .mn{
+    width:190px;
+    height:190px
+
+}
+
+.clock .sec, .sc{
+    width: 230px;
+    height: 230px;
+}
+
+.hr , .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before{
+    width: 6px;
+    height: 80px;
+    /* counter-reset: ""; */
+    content: "";
+    background-color: rgb(249, 7, 47);
+    z-index: 10;
+    position: absolute;
+
+}
+
+.mn:before{
+content: "";
+background-color: rgb(36, 237, 5);
+width: 4px;
+height: 90px;
+position: absolute;
+z-index: 11;
+}
+
+
+
+.sc:before{
+    content: "";
+    background-color: rgb(4, 217, 217);
+    width: 2px;
+    height: 140px;
+    position: absolute;
+    z-index: 12;
+    }
